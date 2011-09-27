@@ -298,9 +298,8 @@ endif
 "autocmd User ~/git/some_folder/* call Tabstyle_spaces() | let g:force_xhtml=1
 "
 
-map <BS>    :tabprevious  <CR>
-map <C-\>  :tabnext      <CR>
-map <F8> jgo
-map <F9> kgo
-map <F5> :wa <CR> :!perl -c % <CR>
-set switchbuf=useopen
+map <BS>  :tabprevious    <CR>
+map <C-\> :tabnext        <CR>
+map <F2>  :wa <CR>
+map <F5>  :wa <CR> :make!  <CR>
+" set switchbuf=useopen
