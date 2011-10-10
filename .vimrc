@@ -300,7 +300,12 @@ endif
 
 map <BS>    :tabprevious  <CR>
 map <C-\>  :tabnext      <CR>
-map <F8> jgo
-map <F9> kgo
-map <F5> :wa <CR> :!perl -c % <CR>
+map <F2> :wa <CR>
+map <F3> go
+map <F5> :!./build.sh <CR>
+map <F9> :mksession! ./1.vim <CR>
 set switchbuf=useopen
+map <C-J> <C-W>j <C-W>_
+map <C-K> <C-W>k <C-W>_
+map <C-H> <C-W>h
+map <C-L> <C-W>l
