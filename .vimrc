@@ -303,9 +303,10 @@ map <C-\>  :tabnext      <CR>
 map <F2> :wa <CR>
 map <F3> go
 map <F5> :!./build.sh <CR>
+map <F6>  :wa <CR> :make!  <CR>
 map <F9> :mksession! ./1.vim <CR>
-set switchbuf=useopen
 map <C-J> <C-W>j <C-W>_
 map <C-K> <C-W>k <C-W>_
 map <C-H> <C-W>h
 map <C-L> <C-W>l
+" set switchbuf=useopen
