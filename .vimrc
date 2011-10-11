@@ -193,7 +193,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 " Hard to type *****************************************************************
 imap uu _
 imap hh =>
-imap aa @
+" imap aa @@
 
 
 " -----------------------------------------------------------------------------  
