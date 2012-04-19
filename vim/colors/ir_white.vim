@@ -111,6 +111,9 @@ hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=ma
 
 hi Todo   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=white         ctermbg=red        cterm=BOLD
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
+" diff options
+hi Todo2   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=white        cterm=BOLD
+hi Constant2         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=white        cterm=NONE
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=NONE       ctermbg=NONE        cterm=NONE

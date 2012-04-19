@@ -230,7 +230,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
   " ruby extconf.rb
   " make
 let g:CommandTMatchWindowAtTop = 1
-map <Leader>f :CommandT<CR>
+map <Leader>f :CommandT ./src/trunk<CR>
 
 
 " fuzzyfinder ********************************************************
