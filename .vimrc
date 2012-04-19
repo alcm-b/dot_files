@@ -98,6 +98,7 @@ colorscheme ir_white
 
 " Status Line *****************************************************************
 set showcmd
+set laststatus=2
 set ruler " Show ruler
 "set ch=2 " Make command line two lines high
 " match LongLineWarning '\%120v.*' " Error format when a line is longer than 120

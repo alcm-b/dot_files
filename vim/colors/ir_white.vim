@@ -109,7 +109,7 @@ hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=ma
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=magenta        ctermbg=NONE        cterm=NONE
 hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=magenta        ctermbg=NONE        cterm=NONE  " if else end
 
-hi Todo   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=LightCyan        cterm=NONE
+hi Todo   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=white         ctermbg=red        cterm=BOLD
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -176,4 +176,7 @@ hi link javaScriptNumber      Number
 hi  link csXmlTag             Keyword      
 
 
-" Special for PHP
+highlight DiffAdd cterm=none ctermbg=white
+highlight DiffDelete cterm=none ctermbg=cyan
+highlight DiffChange cterm=none ctermbg=white
+highlight DiffText ctermbg=lightred cterm=BOLD
