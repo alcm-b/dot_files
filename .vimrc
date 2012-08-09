@@ -299,6 +299,11 @@ endif
 "autocmd User ~/git/some_folder/* call Tabstyle_spaces() | let g:force_xhtml=1
 "
 
+function! Run_shell()
+  split Scratch
+endfunction
+
+
 map <BS>    :tabprevious  <CR>
 map <C-\>  :tabnext      <CR>
 map <F2> :wa <CR>
@@ -306,8 +311,8 @@ map <F3> go
 map <F5> :!./build.sh <CR>
 map <F6>  :wa <CR> :make!  <CR>
 map <F9> :mksession! ./1.vim <CR>
-map <C-J> <C-W>j <C-W>_
-map <C-K> <C-W>k <C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 " set switchbuf=useopen
