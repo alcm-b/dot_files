@@ -98,6 +98,7 @@ colorscheme ir_white
 
 " Status Line *****************************************************************
 set showcmd
+set laststatus=2
 set ruler " Show ruler
 "set ch=2 " Make command line two lines high
 " match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
@@ -229,7 +230,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
   " ruby extconf.rb
   " make
 let g:CommandTMatchWindowAtTop = 1
-map <Leader>f :CommandT<CR>
+map <Leader>f :CommandT ./src/trunk<CR>
 
 
 " fuzzyfinder ********************************************************
@@ -298,6 +299,11 @@ endif
 "autocmd User ~/git/some_folder/* call Tabstyle_spaces() | let g:force_xhtml=1
 "
 
+function! Run_shell()
+  split Scratch
+endfunction
+
+
 map <BS>    :tabprevious  <CR>
 map <C-\>  :tabnext      <CR>
 map <F2> :wa <CR>
@@ -305,8 +311,8 @@ map <F3> go
 map <F5> :!./build.sh <CR>
 map <F6>  :wa <CR> :make!  <CR>
 map <F9> :mksession! ./1.vim <CR>
-map <C-J> <C-W>j <C-W>_
-map <C-K> <C-W>k <C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 " set switchbuf=useopen
