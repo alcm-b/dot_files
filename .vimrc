@@ -192,8 +192,8 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 
 
 " Hard to type *****************************************************************
-imap uu _
-imap hh =>
+" imap uu _
+" imap hh =>
 " imap aa @@
 
 
@@ -230,7 +230,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
   " ruby extconf.rb
   " make
 let g:CommandTMatchWindowAtTop = 1
-map <Leader>f :CommandT ./src/trunk<CR>
+map <Leader>f :CommandT ./src<CR>
 
 
 " fuzzyfinder ********************************************************
