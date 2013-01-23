@@ -1,0 +1,9 @@
+[user]
+	name = alcm-b
+	email = egor.berdnikov@gmail.com
+[color]
+	diff = auto
+[alias]
+    s = status
+    l = log --graph --all --no-color --pretty=format:'%C(green)%h%C(cyan)%d%Creset %s - %an, %ar%Creset'
+    ll = log --stat --no-color --abbrev-commit
