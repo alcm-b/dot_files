@@ -304,15 +304,25 @@ function! Run_shell()
 endfunction
 
 
-map <BS>    :tabprevious  <CR>
-map <C-\>  :tabnext      <CR>
-map <F2> :wa <CR>
-map <F3> go
-map <F5> :!./build.sh <CR>
-map <F6>  :wa <CR> :make!  <CR>
-map <F9> :mksession! ./1.vim <CR>
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-H> <C-W>h
-map <C-L> <C-W>l
+noremap <BS>    :tabprevious  <CR>
+noremap <C-\>  :tabnext      <CR>
+noremap <F2> :wa <CR>
+noremap <F3> go
+noremap <F5> :!./build.sh <CR>
+noremap <F6>  :wa <CR> :make!  <CR>
+noremap <F9> :mksession! ./1.vim <CR>
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
 " set switchbuf=useopen
+autocmd FileType python set cindent
+
+" Pathogen load
+" filetype off
+
+" call pathogen#infect()
+" call pathogen#helptags()
+
+" filetype plugin indent on
+" syntax on

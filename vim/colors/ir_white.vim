@@ -102,25 +102,22 @@ endif
 
 " Syntax highlighting
 hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=cyan    ctermbg=NONE        cterm=NONE
-hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=green      ctermbg=NONE        cterm=NONE
-hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=green     ctermbg=NONE        cterm=NONE
+hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=lightmagenta      ctermbg=NONE        cterm=NONE
+hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=lightmagenta     ctermbg=NONE        cterm=NONE
 
 hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE  " if else end
 
-hi Todo   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=white         ctermbg=red        cterm=BOLD
-hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=green        ctermbg=NONE        cterm=NONE
-" diff options
-hi Todo2   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=white        cterm=BOLD
-hi Constant2         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=white        cterm=NONE
+hi Todo   guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=white         ctermbg=lightmagenta        cterm=BOLD
+hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=lightmagenta        ctermbg=NONE        cterm=NONE
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=NONE       ctermbg=NONE        cterm=NONE
 hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=blue ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=blue   ctermbg=NONE        cterm=NONE
 
-hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
+hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=lightmagenta       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=darkgray       guibg=NONE        gui=NONE      ctermfg=blue       ctermbg=NONE        cterm=NONE
 
@@ -178,8 +175,8 @@ hi link javaScriptNumber      Number
 " Special for CSharp
 hi  link csXmlTag             Keyword      
 
-
-highlight DiffAdd cterm=none ctermbg=white
+" diff options
+hi DiffText ctermfg=none    ctermbg=lightgreen
+highlight DiffAdd cterm=none ctermbg=blue 
 highlight DiffDelete cterm=none ctermbg=cyan
-highlight DiffChange cterm=none ctermbg=white
-highlight DiffText ctermbg=lightred cterm=BOLD
+highlight DiffChange cterm=none ctermbg=none
