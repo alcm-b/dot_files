@@ -32,14 +32,6 @@ dump-diff: dump dump-history
 dump-history: step=1
 dump-history:
 	ls -1t test/logs/dump/*_$(REMOTEHOST).dump  | sed -n '$(step),+1 p' | tac | xargs diff -u -F "COPY\|table_data" | $(pager)
-##
-##	make dump-set-pgpass
-##		Store H-sphere PostgreSQL credentials in .pgpass
-##		TODO pass PG_PASS as a parameter
-dump-set-pgpass:
-	ssh root@$(REMOTEHOST) 'PG_PASS=$$(grep DB_PASS /hsphere/local/home/cpanel/hsphere/WEB-INF/classes/psoft_config/hsphere.properties | awk "{ print \$$3; }") && \
-		echo localhost:5432:hsphere:wwwuser:$$PG_PASS > ~/.pgpass && \
-		chmod 600 ~/.pgpass'
 ## 
 ##	make pgsqlreport-start
 ##		Start logging SQL queries

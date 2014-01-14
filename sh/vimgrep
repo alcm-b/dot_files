@@ -1,0 +1,2 @@
+#!/bin/sh
+vim "+ map <F3> :cp<CR>" "+ map <F4> :cn<CR>" "+ grep -ir '$1' '$2'" "+cw" "+wincmd L" "+wincmd h"

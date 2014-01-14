@@ -6,8 +6,8 @@ usage:
 	sed -ne '1 s/.*/Makefile/p; s/^include[ -]\+\(.*Makefile\|.*.mk\)/\1/p' ./Makefile | xargs ls |\
 	while read b; do \
 		a=`readlink -f $$b` ;\
-		printf "\n\nSource $$a:\n" ;\
-		sed -ne 's/^##[[:space:]]*/\t/ p; /^[[:alnum:]-]\+:/ s/^/\t\t/p;' $$a;\
+		printf "\nSource $$a:\n" ;\
+		sed -ne '/^##[[:space:]]*/ {s/^##[[:space:]]*/\t/ ; p}; /^[[:alnum:]-]\+:$/ { s/^\([[:alnum:]-]\+:\)/\t\1\n/; p; };' $$a;\
 	done | less
 ##
 ## Move remaining vim swap files off the way (to a temporary diretory)
