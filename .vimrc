@@ -192,7 +192,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 
 
 " Hard to type *****************************************************************
-" imap uu _
+imap uu _
 " imap hh =>
 " imap aa @@
 
@@ -205,6 +205,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 :noremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
 let NERDTreeMouseMode=1 " Single click for everything
+let g:NERDTreeWinSize = 44
 
 
 " NERD Commenter **************************************************************
@@ -303,13 +304,15 @@ function! Run_shell()
   split Scratch
 endfunction
 
+set noswapfile
 
 noremap <BS>    :tabprevious  <CR>
 noremap <C-\>  :tabnext      <CR>
 noremap <F2> :wa <CR>
-noremap <F3> go
-noremap <F5> :!./build.sh <CR>
-noremap <F6>  :wa <CR> :make!  <CR>
+noremap <F3> :x <CR>
+noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j src/**" <Bar> cw<CR>
+noremap <F7> :cprev<cr>zz
+noremap <F8> :cn<cr>zz
 noremap <F9> :mksession! ./1.vim <CR>
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
@@ -326,3 +329,11 @@ autocmd FileType python set cindent
 
 " filetype plugin indent on
 " syntax on
+"
+set exrc
+set secure
+hi ColorColumn ctermbg=white guibg=white
+:noremap <Leader>m :marks<CR>
+:noremap <Leader>l :ls<CR>
+set iskeyword=@,48-57,_,192-255,#
+

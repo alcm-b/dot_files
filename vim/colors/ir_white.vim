@@ -68,7 +68,7 @@ hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NO
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
-hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=cyan    ctermbg=NONE        cterm=NONE
+hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=cyan    ctermbg=white        cterm=NONE
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=cyan    ctermbg=cyan    cterm=NONE
 hi StatusLineNC       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=NONE       ctermbg=cyan    cterm=BOLD
@@ -178,5 +178,6 @@ hi  link csXmlTag             Keyword
 " diff options
 hi DiffText ctermfg=none    ctermbg=lightgreen
 highlight DiffAdd cterm=none ctermbg=blue 
+highlight diffAdded cterm=none ctermbg=None ctermfg=4
 highlight DiffDelete cterm=none ctermbg=cyan
 highlight DiffChange cterm=none ctermbg=none
