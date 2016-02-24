@@ -324,16 +324,23 @@ autocmd FileType python set cindent
 " Pathogen load
 " filetype off
 
-" call pathogen#infect()
-" call pathogen#helptags()
+call pathogen#infect()
+call pathogen#helptags()
 
-" filetype plugin indent on
+filetype plugin indent on
 " syntax on
 "
 set exrc
 set secure
 hi ColorColumn ctermbg=white guibg=white
-:noremap <Leader>m :marks<CR>
+:noremap <Leader>m :marks ABCDEFGHIJKLMNOPQRSTUVWXYZ<CR>
 :noremap <Leader>l :ls<CR>
+:noremap <Leader>z za
 set iskeyword=@,48-57,_,192-255,#
 
+" Airline options
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_extensions = ['branch', 'tabline'] ", 'sonar']
+let g:airline_section_x = 2
+let g:airline_section_y = 2
