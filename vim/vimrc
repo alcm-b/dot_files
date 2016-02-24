@@ -309,8 +309,7 @@ set noswapfile
 noremap <BS>    :tabprevious  <CR>
 noremap <C-\>  :tabnext      <CR>
 noremap <F2> :wa <CR>
-noremap <F3> :x <CR>
-noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j src/**" <Bar> cw<CR>
+" noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j src/**" <Bar> cw<CR>
 noremap <F7> :cprev<cr>zz
 noremap <F8> :cn<cr>zz
 noremap <F9> :mksession! ./1.vim <CR>
