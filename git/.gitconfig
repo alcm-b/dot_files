@@ -4,9 +4,13 @@
 [color]
 	diff = false
 [alias]
+    b = branch -av
+    co = checkout
+    f = fetch -v
     s = status
-    l = log --graph --all --no-color --pretty=format:'%C(green)%h%C(cyan)%d%Creset %s - %an, %ar%Creset'
+    l = log --graph --all --no-color --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -11
     ll = log --stat --no-color --abbrev-commit
+    di = diff --no-prefix -b
 [core]
 	pager = vim - -R
 [pager]
