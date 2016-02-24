@@ -1,6 +1,5 @@
 alias ts="DT=\`date +%Y-%m-%d-%H%M\`; echo \$DT"
-alias ts-="DT=./-/\`date +%Y-%m-%d-%H%M\`; mkdir -p \$DT; echo \$DT"
-alias tsdir="DT=\`date +%Y-%m-%d-%H%M\`; mkdir -p \$DT; echo \$DT"
-#alias ts="DT=./-/\`date +%Y-%m-%d-%H%M\`; mkdir -p \$DT ; | xsel -b && echo \$DT"
-alias wipetmp="SC=tmp/-/\`date +%Y-%m-%d-%H%M\` && mkdir -p \$SC; mv tmp/[^-]* \$SC"
+alias ts-='export ts=$(mkdir -p ./-; mktemp -d `date +./-/%Y-%m-%d_XXX`); echo "\$ts: $ts"'
 alias vv="vim -S ./1.vim"
+alias http="http --pretty=format"
+export TERM=xterm-256color
