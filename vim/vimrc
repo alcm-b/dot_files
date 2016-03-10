@@ -91,9 +91,9 @@ set smartcase " Ignore case when searching lowercase
 
 " Colors **********************************************************************
 "set t_Co=256 " 256 colors
-set background=light 
-syntax on " syntax highlighting
-colorscheme ir_white
+" set background=light 
+" syntax on " syntax highlighting
+" colorscheme ir_white
 
 
 " Status Line *****************************************************************
@@ -327,8 +327,8 @@ call pathogen#infect()
 call pathogen#helptags()
 
 filetype plugin indent on
-" syntax on
-"
+syntax on
+
 set exrc
 set secure
 hi ColorColumn ctermbg=white guibg=white
@@ -340,6 +340,12 @@ set iskeyword=@,48-57,_,192-255,#
 " Airline options
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_extensions = ['branch', 'tabline'] ", 'sonar']
-let g:airline_section_x = 2
-let g:airline_section_y = 2
+"let g:airline_extensions = ['branch', 'tabline'] ", 'sonar']
+set tags=./tags;,tags;
+
+set t_Co=16
+set background=dark
+let g:solarized_contrast = "high"
+colorscheme solarized
+" easytags is evil
+" let g:easytags_dynamic_files = 2
