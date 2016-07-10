@@ -1,8 +1,6 @@
 [user]
 	name = Egor Berdnikov
-	email = eberdnikov@odin.com
-[color]
-	diff = false
+	email = egor.berdnikov@gmail.com
 [alias]
     b = branch -av
     co = checkout
@@ -11,7 +9,12 @@
     l = log --graph --all --no-color --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -11
     ll = log --stat --no-color --abbrev-commit
     di = diff --no-prefix -b
+[color]
+	diff = auto
+	status = auto
+	branch = auto
 [core]
 	pager = vim - -R
 [pager]
 	log = off
+	diff = off
