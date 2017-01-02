@@ -14,7 +14,9 @@
 	status = auto
 	branch = auto
 [core]
-	pager = vim - -R
+    editor = vim
 [pager]
 	log = off
-	diff = off
+    diff = off
+[push]
+	default = simple
