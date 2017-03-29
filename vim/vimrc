@@ -309,7 +309,9 @@ set noswapfile
 noremap <BS>    :tabprevious  <CR>
 noremap <C-\>  :tabnext      <CR>
 noremap <F2> :wa <CR>
-" noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j src/**" <Bar> cw<CR>
+noremap <F3> :silent !touch /tmp/00<CR>:redraw!<CR>
+noremap <F5> ggO<Esc>yypgg:r ! ~/date2<CR>
+noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
 noremap <F7> :cprev<cr>zz
 noremap <F8> :cn<cr>zz
 noremap <F9> :mksession! ./1.vim <CR>
@@ -332,20 +334,25 @@ syntax on
 set exrc
 set secure
 hi ColorColumn ctermbg=white guibg=white
-:noremap <Leader>m :marks ABCDEFGHIJKLMNOPQRSTUVWXYZ<CR>
-:noremap <Leader>l :ls<CR>
-:noremap <Leader>z za
 set iskeyword=@,48-57,_,192-255,#
 
 " Airline options
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_extensions = ['branch', 'tabline'] ", 'sonar']
+let g:airline#extensions#branch#enabled = 1
+let g:airline_extensions = ['tabline'] ", 'branch', 'sonar']
 set tags=./tags;,tags;
 
-set t_Co=16
-set background=dark
-let g:solarized_contrast = "high"
-colorscheme solarized
 " easytags is evil
 " let g:easytags_dynamic_files = 2
+
+set t_Co=16
+set background=light
+let g:solarized_contrast = "high"
+colorscheme solarized
+:noremap <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+:noremap <Leader>l :set number!<cr>
+:noremap <Leader>m :marks ABCDEFGHIJKLMNOPQRSTUVWXYZ<CR>
+:noremap <Leader>s :setlocal spell!<cr>
+:noremap <Leader>v :set paste!<cr>
+:noremap <Leader>z za
