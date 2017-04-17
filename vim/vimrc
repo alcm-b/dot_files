@@ -347,7 +347,7 @@ set tags=./tags;,tags;
 " let g:easytags_dynamic_files = 2
 
 set t_Co=16
-set background=light
+set background=dark
 let g:solarized_contrast = "high"
 colorscheme solarized
 :noremap <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
