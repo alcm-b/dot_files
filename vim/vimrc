@@ -350,7 +350,7 @@ set t_Co=16
 set background=light
 let g:solarized_contrast = "high"
 colorscheme solarized
-:noremap <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+:noremap <Leader>bg :let &background = ( &background == "light"? "dark" : "light" )<CR>
 :noremap <Leader>l :set number!<cr>
 :noremap <Leader>m :marks ABCDEFGHIJKLMNOPQRSTUVWXYZ<CR>
 :noremap <Leader>s :setlocal spell!<cr>
