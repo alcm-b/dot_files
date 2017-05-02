@@ -2,11 +2,11 @@
 	name = Egor Berdnikov
 	email = egor.berdnikov@gmail.com
 [alias]
-    b = branch -av
+    b = branch -avv
     co = checkout
     f = fetch -v
     s = status
-    l = log --graph --all --no-color --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -11
+    l = log --graph --all --no-color --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -22
     ll = log --stat --no-color --abbrev-commit
     di = diff --no-prefix -b
 [color]
@@ -20,3 +20,5 @@
     diff = off
 [push]
 	default = simple
+[pull]
+	rebase = true
