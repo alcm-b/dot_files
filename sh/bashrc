@@ -11,5 +11,6 @@ alias vv="vim -S ./1.vim"
 alias rgrep='grep -iR'
 alias http="http --pretty=format"
 export TERM=xterm-256color
+PS1="\[$(tput bold)\]\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
 
 test -f ~/.bashrc.local && . ~/.bashrc.local
