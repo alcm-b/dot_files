@@ -1,6 +1,10 @@
 alias ts="DT=\`date +%Y-%m-%d-%H%M\`; echo \$DT"
 alias ts-='export ts=$(mkdir -p ./-; mktemp -d `date +./-/%Y-%m-%d_XXX`); echo "\$ts: $ts"'
 alias vv="vim -S ./1.vim"
+alias nn='cd $PLAINTXT; vim -S 1.vim +NERDTree +"vertical resize 22" +"normal O"'
+alias nnsave='test -d "$PLAINTXT" && (cd $PLAINTXT; git pull; git status; echo to be committed; read; git commit -am "$(hostname)")'
 alias rgrep='grep -iR'
 alias http="http --pretty=format"
+alias mc="mc -b"
 export TERM=xterm-256color
+alias ctl=systemctl

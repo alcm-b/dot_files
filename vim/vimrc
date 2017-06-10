@@ -314,7 +314,7 @@ noremap <F5> ggO<Esc>yypgg:r ! ~/date2<CR>
 noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
 noremap <F7> :cprev<cr>zz
 noremap <F8> :cn<cr>zz
-noremap <F9> :mksession! ./1.vim <CR>
+noremap <F9> :NERDTreeClose \| mksession! ./1.vim <CR>
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
