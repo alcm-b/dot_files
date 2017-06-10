@@ -309,7 +309,7 @@ set noswapfile
 noremap <BS>    :tabprevious  <CR>
 noremap <C-\>  :tabnext      <CR>
 noremap <F2> :wa <CR>
-noremap <F3> :silent !touch /tmp/00<CR>:redraw!<CR>
+noremap <F2><F2> :wa <CR> :silent !touch /tmp/00<CR>:redraw!<CR>
 noremap <F5> ggO<Esc>yypgg:r ! ~/date2<CR>
 noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
 noremap <F7> :cprev<cr>zz
@@ -350,7 +350,7 @@ set t_Co=16
 set background=dark
 let g:solarized_contrast = "high"
 colorscheme solarized
-:noremap <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+:noremap <Leader>bg :let &background = ( &background == "light"? "dark" : "light" )<CR>
 :noremap <Leader>l :set number!<cr>
 :noremap <Leader>m :marks ABCDEFGHIJKLMNOPQRSTUVWXYZ<CR>
 :noremap <Leader>s :setlocal spell!<cr>
