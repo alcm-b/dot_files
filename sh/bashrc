@@ -28,3 +28,7 @@ PS1='\033[1;31m\u@\h \w\[$(tput sgr0)\]$(__git_ps1 " %s")\n[\j] \$ '
 # PS1="\[$(tput bold)\]\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
 
 test -f ~/.bashrc.local && . ~/.bashrc.local
+
+export WORKON_HOME=$HOME/opt/virtualenv
+export PROJECT_HOME=$HOME/src
+source /usr/bin/virtualenvwrapper.sh
