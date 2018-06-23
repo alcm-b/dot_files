@@ -15,11 +15,12 @@ alias nnsave='test -d "$PLAINTXT" && (cd $PLAINTXT; git pull; git status; echo t
 alias rgrep='grep -iRn'
 alias http="http --pretty=format"
 alias mc="mc -b"
-
+alias info='info --vi-keys'
 export TERM=xterm-256color
 alias sctl=systemctl
 
-source /opt/git-prompt/git-prompt.sh
+# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+source /opt/git-contrib/git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="auto verbose"
 PS1='\033[1;31m\u@\h \w\[$(tput sgr0)\]$(__git_ps1 " %s")\n[\j] \$ '
 
@@ -27,8 +28,9 @@ PS1='\033[1;31m\u@\h \w\[$(tput sgr0)\]$(__git_ps1 " %s")\n[\j] \$ '
 # PS1="\\033[1;31m\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
 # PS1="\[$(tput bold)\]\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
 
-test -f ~/.bashrc.local && . ~/.bashrc.local
-
 export WORKON_HOME=$HOME/opt/virtualenv
 export PROJECT_HOME=$HOME/src
 source /usr/bin/virtualenvwrapper.sh
+
+test -f ~/bashrc.local && . ~/bashrc.local
+. /opt/alf/ref/github.com/alcm-b/dot_files/gnome-terminal/gnome-bashrc
