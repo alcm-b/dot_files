@@ -34,3 +34,24 @@ source /usr/bin/virtualenvwrapper.sh
 
 test -f ~/bashrc.local && . ~/bashrc.local
 . /opt/alf/ref/github.com/alcm-b/dot_files/gnome-terminal/gnome-bashrc
+
+clone () {
+    repohome=/opt/alf/ref
+    case $1 in
+    *github.com*)
+        # $1 == https://github.com/holman/spark
+        user=$(echo "$1" | cut -d/ -f4)
+        repo=$(echo "$1" | cut -d/ -f5)
+        repodir=$repohome/github.com/$user/$repo
+        if [ -d $repodir ] ; then
+            echo Already exists: $repodir
+        else
+            git clone $1 $repodir
+        fi
+    ;;
+    *)
+        # https://pagure.io/copr/copr.git
+        echo Do not know, how to git clone $1
+    ;;
+    esac
+}
