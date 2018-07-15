@@ -3,12 +3,12 @@ DD:=$(shell date +%Y-%m-%d_%H%M)
 ##
 ## Display help on Makefile targets
 usage:
-	sed -ne '1 s/.*/Makefile/p; s/^include[ -]\+\(.*Makefile\|.*.mk\)/\1/p' ./Makefile | xargs ls |\
+	(echo ./Makefile ; sed -ne 's|~|$(HOME)| ; s/^-\{0,1\}include \(.*Makefile\|.*.mk\)/\1/p' ./Makefile) |\
 	while read b; do \
-		a=`readlink -f $$b` ;\
+		a=$$(realpath $$b) ;\
 		printf "\nSource file '$$a':\n" ;\
 		sed -ne '/^##[[:space:]]*/ {s/^##[[:space:]]*/\t/ ; p}; /^[[:alnum:]-]\+:\([^=]\|$$\)/ { s/^\([[:alnum:]-]\+:.*$$\)/\t\t\1/; p; };' $$a;\
-	done | vi - -R
+	done
 ##
 ## Move remaining vim swap files off the way (to a temporary diretory)
 vimclean:
@@ -19,3 +19,13 @@ vimclean:
 ## Find two most recently changed files with a given pattern; display diff between them.
 diff-recent:
 	ls -rt $(file_pattern) | tail -2 | xargs diff -u | vim - -R
+
+##
+## Upon user request, trigger code linter or any other commands defined in 
+## 'f2' target (see .vimrc for F2 key mapping)
+tdd:
+	while true; do \
+		$(MAKE) f2 ; \
+		inotifywait -eattrib /tmp/00 ;\
+		echo ;\
+	done
