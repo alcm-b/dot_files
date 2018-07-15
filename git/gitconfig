@@ -6,9 +6,10 @@
     co = checkout
     f = fetch -v
     s = status
-    l = log --graph --all --no-color --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -22
-    ll = log --graph --all --no-color --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -222
+    l = log --graph --all --pretty=format:'%C(green bold)%h %ad%C(magenta bold)%d%Creset %s - %ae %ar' -22 --date=short
+    l2 = log --graph --all --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -22
     di = diff --no-prefix -b
+    r = remote -v
 [color]
 	diff = auto
 	status = auto
@@ -22,3 +23,5 @@
 	default = simple
 [pull]
 	rebase = true
+[diff]
+    guitool = kdiff3

@@ -57,6 +57,12 @@ endfunction
 
 call Tabstyle_spaces()
 
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 " Indenting *******************************************************************
 set ai " Automatically set the indent of a new line (local to buffer)
@@ -309,7 +315,7 @@ set noswapfile
 noremap <BS>    :tabprevious  <CR>
 noremap <C-\>  :tabnext      <CR>
 noremap <F2> :wa <CR>
-noremap <F2><F2> :wa <CR> :silent !touch /tmp/00<CR>:redraw!<CR>
+noremap <F2><F2> :wa <CR> :silent !touch /tmp/00$(id -u)<CR>:redraw!<CR>
 noremap <F5> ggO<Esc>yypgg:r ! ~/date2<CR>
 noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
 noremap <F7> :cprev<cr>zz
@@ -321,6 +327,7 @@ noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 " set switchbuf=useopen
 autocmd FileType python set cindent
+autocmd FileType python :set colorcolumn=80
 
 " Pathogen load
 " filetype off
@@ -340,7 +347,7 @@ set iskeyword=@,48-57,_,192-255,#
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
-let g:airline_extensions = ['tabline'] ", 'branch', 'sonar']
+let g:airline_extensions = ['tabline', 'branch'] ", 'sonar']
 set tags=./tags;,tags;
 
 " easytags is evil
@@ -356,3 +363,15 @@ colorscheme solarized
 :noremap <Leader>s :setlocal spell!<cr>
 :noremap <Leader>v :set paste!<cr>
 :noremap <Leader>z za
+:noremap <Leader>d oimport ipdb; ipdb.set_trace()<Esc>0
+
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+set isfname-=\=
+
+if isdirectory(expand(".git"))
+  let g:NERDTreeBookmarksFile = '.git/.nerdtree-bookmarks'
+endif
+
+let g:NERDTreeWinPos = 'right'
