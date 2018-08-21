@@ -1,0 +1,1 @@
+https://github.com/yktoo/yktools/blob/master/gnome-terminal-profile

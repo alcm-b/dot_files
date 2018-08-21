@@ -1,0 +1,87 @@
+# $ dconf dump /org/gnome/terminal/legacy/profiles\:/ 
+
+[:3b1b98b0-fa6b-4778-966b-3dbd0593056f]
+foreground-color='rgb(145,166,168)'
+visible-name='solarized'
+scrollbar-policy='never'
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(179,174,162)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+default-size-rows=124
+default-size-columns=122
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Hack 9'
+background-color='rgb(0,43,54)'
+background-transparency-percent=3
+audible-bell=false
+
+[:b67c9872-076b-4a23-b1fa-3c4a6cb1cdb6]
+foreground-color='rgb(0,0,0)'
+visible-name='solarized-light'
+login-shell=false
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(25,27,28)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+custom-command=''
+default-size-columns=122
+default-size-rows=124
+use-system-font=false
+use-custom-command=false
+use-theme-colors=false
+exit-action='close'
+font='Hack 9'
+bold-color-same-as-fg=false
+bold-color='rgb(38,45,47)'
+background-color='rgb(238,238,236)'
+audible-bell=false
+scrollbar-policy='never'
+
+[:75c46831-b6ad-4284-b6db-66470ccb7c66]
+foreground-color='rgb(46,52,54)'
+visible-name='solarized-light2'
+login-shell=false
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(233,230,220)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(43,53,56)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+custom-command=''
+default-size-columns=122
+default-size-rows=124
+use-system-font=false
+use-custom-command=false
+use-theme-colors=false
+exit-action='close'
+font='Hack 10.5'
+bold-color-same-as-fg=false
+bold-color='#58586e6e7575'
+background-color='rgb(238,238,236)'
+audible-bell=false
+scrollbar-policy='never'
+
+[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(170,170,170)'
+visible-name='default'
+login-shell=false
+default-size-columns=144
+default-size-rows=124
+scroll-on-output=false
+use-system-font=false
+use-theme-colors=false
+font='Ubuntu Mono derivative Powerline 10.5'
+background-color='rgb(27,27,27)'
+audible-bell=false
+scrollbar-policy='never'
+
+[/]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '3b1b98b0-fa6b-4778-966b-3dbd0593056f', 'b67c9872-076b-4a23-b1fa-3c4a6cb1cdb6', '75c46831-b6ad-4284-b6db-66470ccb7c66', 'f6a79e3e-ca24-459b-a557-c2aa022eaa3c']
+default='3b1b98b0-fa6b-4778-966b-3dbd0593056f'
+
+[:f6a79e3e-ca24-459b-a557-c2aa022eaa3c]
+foreground-color='rgb(145,166,168)'
+visible-name='solarized2'
+scrollbar-policy='never'
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(179,174,162)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+default-size-rows=124
+default-size-columns=122
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Hack 10.5'
+background-color='rgb(0,43,54)'
+background-transparency-percent=3
+audible-bell=false
