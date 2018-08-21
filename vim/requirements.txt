@@ -1,0 +1,7 @@
+ansible-vim
+nerdtree
+vim-airline
+vim-colors-solarized
+vim-fugitive
+vim-signature
+vim-surround
