@@ -24,8 +24,8 @@ diff-recent:
 ## Upon user request, trigger code linter or any other commands defined in 
 ## 'f2' target (see .vimrc for F2 key mapping)
 tdd:
+	touch /tmp/00$$(id -u) 
 	while true; do \
 		$(MAKE) f2 ; \
-		inotifywait -eattrib /tmp/00 ;\
-		echo ;\
+		inotifywait -eattrib /tmp/00$$(id -u) ;\
 	done
