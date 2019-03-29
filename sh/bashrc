@@ -8,18 +8,21 @@ fi
 PLAINTXT=/srv/plaintext
 
 alias catp='pygmentize'
+alias curlkrb="curl -Ss --negotiate -u : "
 alias http="http --pretty=format"
 alias info='info --vi-keys'
 alias mc="mc -b"
 alias nn='cd $PLAINTXT; vim -S 1.vim +NERDTree +"vertical resize 22" +"normal O"'
 alias nnsave='test -d "$PLAINTXT" && (cd $PLAINTXT; git pull; git diff --stat; git status; echo to be committed; read; git commit -am "$(hostname)")'
-alias rgrep='grep --exclude=tags -iRn'
+alias rgrep='grep --exclude=tags --exclude-dir=- --exclude-dir=.git -iRn'
 alias sc=systemctl
 alias ts-='export ts=$(mkdir -p ./-; mktemp -d `date +./-/%Y-%m-%d_XXX`); echo "\$ts: $ts"'
 alias ts="DT=\`date +%Y-%m-%d-%H%M\`; echo \$DT"
 alias vv="vim -S ./1.vim"
+alias wvim='vim +"set background=light"'
 
 export TERM=xterm-256color
+export EDITOR=vim
 
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source /opt/git-prompt/git-prompt.sh
@@ -30,7 +33,6 @@ PS1='\033[1;31m\u@\h \w\[$(tput sgr0)\]$(__git_ps1 " %s")\n[\j] \$ '
 # PS1="\\033[1;31m\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
 # PS1="\[$(tput bold)\]\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
 
-export WORKON_HOME=$HOME/opt/virtualenv
 export PROJECT_HOME=$HOME/src
 
 test -f ~/bashrc.local && . ~/bashrc.local
@@ -55,8 +57,6 @@ clone () {
     ;;
     esac
 }
-# source /usr/bin/virtualenvwrapper.sh
-# eval "$(direnv hook bash)"
 
 vimgrep () {
     vim "+vimgrep $1 ./$2/** | cw | wincmd J | resize +11"
