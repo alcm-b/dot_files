@@ -1,5 +1,5 @@
 #!/bin/sh
-# create symbolic links to the dotfiles
+# create symbolic links
 
 set -e
 refdir=/opt/alf/ref/github.com
@@ -11,5 +11,5 @@ create_symlink () {
 
 create_symlink "$refdir/dot_files/vim/vimrc" ./.vimrc
 create_symlink "$refdir/dot_files/git/gitconfig" ./.gitconfig
-create_symlink $refdir/dot_files/bin/generic.mk ./generic.mk 
+create_symlink $refdir/dot_files/make/misc.mk ./misc.mk 
 (cd /home/alf/.vim/bundle/vim-colors-solarized/colors ; create_symlink $refdir/vim-colors-solarized/colors/solarized.vim ./solarized.vim )
