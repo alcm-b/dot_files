@@ -1,6 +1,6 @@
 [user]
-	name = Egor Berdnikov
-	email = egor.berdnikov@gmail.com
+    name = Egor Berdnikov
+    email = egor.berdnikov@gmail.com
 [alias]
     b = branch -avv
     co = checkout
@@ -9,6 +9,7 @@
     l = log --graph --all --pretty=format:'%C(green bold)%h %ad%C(magenta bold)%d%Creset %s - %ae %ar' -22 --date=short
     l2 = log --graph --all --pretty=format:'%C(blue)%h%C(magenta bold)%d%Creset %s - %an, %ar%Creset' -22
     di = diff --no-prefix -b
+    wdiff = diff --no-prefix -b --word-diff
     r = remote -v
 [color]
 	diff = auto
@@ -25,3 +26,10 @@
 	rebase = true
 [diff]
     guitool = kdiff3
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential]
+	helper = cache

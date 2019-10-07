@@ -5,31 +5,34 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-PLAINTXT=/srv/plaintext
-
 alias catp='pygmentize'
 alias cd=pushd
 alias curlkrb="curl -Ss --negotiate -u : "
 alias http="http --pretty=format"
 alias info='info --vi-keys'
 alias mc="mc -b"
-alias nn='cd $PLAINTXT; vim -S 1.vim +NERDTree +"vertical resize 22" +"normal O"'
+alias nn='cd $PLAINTXT; wvim -S 1.vim +NERDTree +"vertical resize 22" +"normal O"'
 alias nnsave='test -d "$PLAINTXT" && (cd $PLAINTXT; git pull; git diff --stat; git status; echo to be committed; read; git commit -am "$(hostname)")'
 alias rgrep='grep --exclude=tags --exclude-dir=- --exclude-dir=.git -iRn'
 alias sc=systemctl
 alias ts="DT=\`date +%Y-%m-%d-%H%M\`; echo \$DT"
 alias ts-='export ts=$(mkdir -p ./-; mktemp -d `date +./-/%Y-%m-%d_XXX`); echo "\$ts: $ts"'
-alias vv="vim -S ./1.vim"
+alias cdiff='colordiff -u'
+alias lynx='lynx -nocolor'
+alias 00="date +%Y-%m-%d-%H%M > /tmp/00; echo /tmp/00"
+
+alias date2="TZ='Europe/Prague'  date --iso-8601=seconds | sed 's/^/-- /; s/T/ /; s/+.*//'"
 alias wvim='vim +"set background=light"'
 
 export TERM=xterm-256color
 export EDITOR=vim
 alias sc=systemctl
+HISTFILESIZE=8000
 
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source /opt/git-prompt/git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="auto verbose"
-PS1='\033[1;31m\u@\h \w\[$(tput sgr0)\]$(__git_ps1 " %s")\n[\j] \$ '
+PS1='[\j] \033[1;31m\u@\h \w\[$(tput sgr0)\]$(__git_ps1 " %s")\n\$ '
 
 # other variants of the above:
 # PS1="\\033[1;31m\u@\h \w\[$(tput sgr0)\]\n[\j] \$ "
