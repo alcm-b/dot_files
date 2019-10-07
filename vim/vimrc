@@ -316,11 +316,11 @@ set wildignore=./-/**,./tags,./tmp/**
 
 noremap <BS>    :tabprevious  <CR>
 noremap <C-\>  :tabnext      <CR>
-noremap <Tab> <C-W>W<CR>
+" Breaks <Ctrl-I> noremap <Tab> <C-W>W<CR>
 noremap <F2> :wa <CR>
-noremap <F2><F2> :wa <CR> :silent !cat 1 > /tmp/00$(id -u)<CR>:redraw!<CR>
-noremap <F5> ggO<Esc>yypgg:r ! ~/date2<CR>
-noremap <C-F5> o<Esc>:r ! ~/date2<CR>kJ
+noremap <F2><F2> :wa <CR> :silent !cat 1 > /tmp/00$(id -u)<CR> :redraw!<CR>
+noremap <F5> ggO<Esc>yypgg:r ! ~/bin/date2<CR>kddp
+noremap <C-F5> o<Esc>:r ! ~/bin/date2<CR>kJ
 noremap <F6> :execute "vimgrep /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
 noremap <C-F6> :execute "vimgrepa /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
 noremap <F7> :cprev<cr>zz
@@ -355,7 +355,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline_extensions = ['tabline', 'branch'] ", 'sonar']
 set tags=./tags;,tags;
 
-" easytags is evil
+" easytags is evil (buggy and slow)
 " let g:easytags_dynamic_files = 2
 
 set t_Co=16
@@ -380,3 +380,6 @@ if isdirectory(expand(".git"))
 endif
 
 let g:NERDTreeWinPos = 'right'
+
+" hi diffAdded   ctermfg=DarkGreen
+" hi diffRemoved ctermfg=red
